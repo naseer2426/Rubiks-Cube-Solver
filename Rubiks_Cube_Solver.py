@@ -10,7 +10,7 @@ just_front = 0
 cube_sol = []
 cube_input = []
 cube_loc = []
-
+#test
 def takeInput():
     global index, curr_face, err, cube_sol, cube_input
     root = Tk()
