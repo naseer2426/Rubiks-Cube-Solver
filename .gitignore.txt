@@ -1,0 +1,4 @@
+\dist
+\build
+\__pycache__
+rubiks_cube_solver.spec    
