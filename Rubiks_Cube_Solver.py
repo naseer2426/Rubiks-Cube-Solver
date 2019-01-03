@@ -10,8 +10,9 @@ just_front = 0
 cube_sol = []
 cube_input = []
 cube_loc = []
+input_complete = 0
 def takeInput():
-    global index, curr_face, err, cube_sol, cube_input
+    global index, curr_face, err, cube_sol, cube_input, input_complete
     root = Tk()
     init_box_pos = (95,20)
     len = 85
@@ -25,6 +26,7 @@ def takeInput():
     cube_input = cube
     cube_sol = []
     curr_face = cube[index]
+    input_complete = 0
 
 
 
@@ -119,7 +121,7 @@ def takeInput():
         makeBox(canvas,len)
 
     def goNext():
-        global index,curr_face,err, cube_sol, cube_input
+        global index,curr_face,err, cube_sol, cube_input, input_complete
         go = 1
         for i in curr_face:
             if i=='grey':
@@ -154,6 +156,7 @@ def takeInput():
                     efficient(s)
                     efficient(t)
                     cube_sol = f+s+t
+                    input_complete = 1
                     root.destroy()
         else:
             error.pack()
@@ -174,7 +177,7 @@ def takeInput():
     makeBox(canvas,len)
     root.mainloop()
 
-    return [cube_input,cube_sol]
+    return [cube_input,cube_sol,input_complete]
 
 
 def sol_cube(cube_input,cube_sol):
@@ -243,7 +246,7 @@ def sol_cube(cube_input,cube_sol):
 
 def main():
     input_cube = takeInput()
-    if input_cube[0][0][0]!='grey':
+    if input_cube[2]:
         sol_cube(input_cube[0],input_cube[1])
 
 if __name__ =='__main__':
