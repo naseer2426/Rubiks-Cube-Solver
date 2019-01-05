@@ -4,10 +4,10 @@ A program that can solve any Rubik's Cube using Fredrich CFOP Method. The back-e
 
 # How to run the program?
 
-> If you have python installed:
+- If you have python installed:
 
 > Clone the directory and run rubiks_cube_solver.py
 
-> If you don't have python installed (for windows users only):
+- If you don't have python installed (for windows users only):
 
 > Clone the directory and run the rubiks_cube_solver.exe file.
