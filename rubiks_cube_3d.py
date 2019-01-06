@@ -16,7 +16,7 @@ def convert3dTo2d(coord):
     z = coord[2]
 
     X = ((x-z)/root_two)*85+200
-    Y = -(((2*y-x-z)/root_six)*85-200)
+    Y = -(((root_two*y-x-z)/2)*85-200) #2*y-x-z)/root_six
 
     return (X,Y)
 
