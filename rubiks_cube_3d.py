@@ -688,5 +688,6 @@ if __name__ == '__main__':
     root.geometry("500x500")
     canvas = tk.Canvas(root, height = 400, width = 400)
     canvas.pack()
+    #git
     three_d_cube_moves(rubiks_cube,[['r', 'w', 'y', 'r', 'b', 'w', 'w', 'y', 'o'], ['r', 'b', 'w', 'w', 'w', 'g', 'r', 'r', 'w'], ['b', 'r', 'g', 'r', 'r', 'g', 'b', 'y', 'g'], ['o', 'b', 'y', 'o', 'y', 'g', 'o', 'y', 'y'], ['b', 'b', 'g', 'w', 'o', 'o', 'b', 'b', 'g'], ['y', 'y', 'r', 'o', 'g', 'g', 'o', 'o', 'w']],0.5,["f'","l'","b'",'f','d',"r'",'u'],canvas)
     root.mainloop()
